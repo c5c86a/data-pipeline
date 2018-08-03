@@ -2,7 +2,7 @@ import faust
 
 app = faust.App(
     'hello-world',
-    broker='kafka://localhost:9092',
+    broker='kafka://kafka1:9092',
     value_serializer='raw',
 )
 

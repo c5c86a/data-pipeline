@@ -1,12 +1,12 @@
-language: python
+sudo: required
 
-python:
-  - '3.6'
+services:
+  - docker
 
 install:
-  - pip install -U faust
-  - pip install aiocontextvars
-  - docker-compose up -d
+  - docker-compose up -d zoo1 kafka1
+  - sleep 10
 
 script:
-  - faust -A hello_world worker -l info
+  - docker-compose logs
+  - docker-compose up faust
