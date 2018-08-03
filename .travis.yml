@@ -12,5 +12,5 @@ script:
   - docker-compose up faust -d
   - sleep 2
   - docker-compose logs zoo1 kafka1
-  - docker-compose logs fause
+  - docker-compose logs faust
   - docker-compose down
