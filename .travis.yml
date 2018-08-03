@@ -5,6 +5,7 @@ python:
 
 install:
   - pip install -U faust
+  - pip install aiocontextvars
   - docker-compose up -d
 
 script:
