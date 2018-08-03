@@ -1,0 +1,11 @@
+language: python
+
+python:
+  - '2.7'
+
+install:
+  - pip install -U faust
+  - docker-compose up -d
+
+script:
+  - faust -A hello_world worker -l info
