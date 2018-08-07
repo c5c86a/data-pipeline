@@ -1,4 +1,0 @@
-faust
-aiocontextvars
-pytest
-pytest-asyncio 
