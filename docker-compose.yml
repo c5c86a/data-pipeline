@@ -33,3 +33,5 @@ services:
 
   faust:
     build: .
+    volumes:
+      - ./src:/app

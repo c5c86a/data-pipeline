@@ -16,9 +16,16 @@ RUN mkdir /build \
     && INSTALL_PATH=/usr make install-shared \
     && rm -rf /build
 
-RUN pip install -U faust[rocksdb]
-RUN pip install aiocontextvars
-COPY hello_world.py ./
+RUN pip install -U \
+    faust[rocksdb] \
+    aiocontextvars \
+    pytest \
+    pytest-asyncio 
 
-ENTRYPOINT ["faust", "-A", "hello_world", "worker", "-l", "info"]
+RUN mkdir -p /app 
+WORKDIR /app
+
+#ENTRYPOINT ["faust", "-A", "hello_world", "worker", "-l", "info"]
+
+ENTRYPOINT ["pytest", "--junitxml=junit.xml", "pipeline.py"]
 

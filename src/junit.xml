@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testsuite errors="0" failures="0" name="pytest" skips="0" tests="2" time="0.389"><testcase classname="pipeline" file="pipeline.py" line="32" name="test_foo" time="0.09914374351501465"></testcase><testcase classname="pipeline" file="pipeline.py" line="46" name="test_bar" time="0.0023572444915771484"></testcase></testsuite>
