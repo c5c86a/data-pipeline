@@ -11,7 +11,7 @@ async def foo(stream):
 @app.agent()
 async def bar(stream):
     async for value in stream:
-        yield value + 'YOLO'
+        yield value + 'YOLO...'
 
 
 
@@ -36,7 +36,7 @@ def test_app():
 async def test_bar(test_app):
     async with bar.test_context() as agent:
         event = await agent.put('hey')
-        assert agent.results[event.message.offset] == 'heyYOLO'
+        assert agent.results[event.message.offset] == 'heyYOLO...'
 
 # If your agent calls another agent: mock the other agent to verify it was called.
 def mock_coro(return_value=None, **kwargs):
