@@ -3,6 +3,10 @@ sudo: required
 services:
   - docker
 
+cache:
+  directories:
+    - $HOME/docker
+
 env:
   - DOCKER_COMPOSE_VERSION=1.22.0
 

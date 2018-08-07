@@ -27,5 +27,5 @@ WORKDIR /app
 
 #ENTRYPOINT ["faust", "-A", "hello_world", "worker", "-l", "info"]
 
-ENTRYPOINT ["pytest", "--junitxml=junit.xml", "pipeline.py"]
+ENTRYPOINT ["pytest", "--junitxml=junit.xml"]
 
