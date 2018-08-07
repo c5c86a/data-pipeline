@@ -24,4 +24,3 @@ script:
   - docker-compose logs
   - docker-compose up faust
   - docker-compose down
-`
